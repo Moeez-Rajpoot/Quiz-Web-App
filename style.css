@@ -1,0 +1,60 @@
+
+.myclass{
+    background: linear-gradient(135deg ,rgb(6, 6, 6) , rgb(7, 121, 162));
+}
+.main{
+
+    background: linear-gradient(rgb(14, 185, 190),black);
+    width: 70%;
+    max-width: 600px;
+    max-height: 510px;
+    margin: 100px auto ;
+    padding: 30px;
+    border-radius: 20px;
+
+}
+
+.main h2{
+
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(25, 5, 44);
+}
+#row{
+
+    justify-content: space-between;
+}
+
+#row button{
+
+    padding: 5px;
+    border-radius: 10px;
+    text-align: left;
+    padding: 8px;
+    margin: 10px auto ;
+    width: 100%;
+
+}
+
+#row button:hover{
+
+   background:linear-gradient(130deg ,rgb(20, 108, 104) , rgb(7, 199, 213)) ;
+   color: white;
+   font-size: large;
+
+}
+#next{
+    display: flex;
+    padding: 5px;
+    width: 80px;
+    margin: 10px auto;
+    align-items: center;
+    border-radius: 10px;
+    justify-content: center;
+    display: none;
+}
+
+#next:hover{
+
+    background: linear-gradient(rgb(10, 201, 234) ,blue);
+}
+
