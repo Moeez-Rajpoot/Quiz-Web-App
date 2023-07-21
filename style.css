@@ -17,7 +17,7 @@
 .main h2{
 
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: rgb(25, 5, 44);
+    color: rgb(253, 253, 254);
 }
 #row{
 
@@ -44,18 +44,21 @@
 }
 #next{
     display: flex;
-    padding: 5px;
-    width: 80px;
+    padding: 10px;
+    width: auto;
+    min-width: 20%;
     margin: 10px auto;
     align-items: center;
     border-radius: 10px;
     justify-content: center;
     display: none;
+    white-space: nowrap;
+    align-content: center;
 }
 
 #next:hover{
 
-    background: linear-gradient(rgb(10, 201, 234) ,blue);
+    background: linear-gradient(rgb(10, 201, 234) ,rgb(14, 244, 221));
 }
 
 .correct{
@@ -70,7 +73,10 @@
     color: white;
 }
 .bt[disabled] {
-    cursor: not-allowed;
+    
+    
     pointer-events: none;
+    cursor: not-allowed;
   }
+
 

@@ -45,7 +45,8 @@ function startquiz() {
 
 function Showquestion(params) {
 
-  Question.innerHTML = 1+Index + ") " + quizData[Index].question;
+  if (Index < quizData.length) {
+    Question.innerHTML = 1+Index + ") " + quizData[Index].question;
   
   //Very Important Concept for dynamic button and onclick on them
   quizData[Index].options.forEach( value => {
@@ -59,6 +60,20 @@ function Showquestion(params) {
 
     });
   })
+    
+  }
+
+  else{
+
+    while (Buttons.firstChild) {                    //imp concept of removing previous elements 
+      Buttons.removeChild(Buttons.firstChild);
+    }
+    Index=  quizData.length + 10;
+    Question.innerHTML =" Your Score is " + Score;
+    Question.style.color="white";
+    Nextbtn.style.display="block";
+    Nextbtn.innerHTML="Play Again 😄";
+  }
 }
 
 function Selectbtn(selectedAnswer) {
@@ -89,12 +104,24 @@ function Selectbtn(selectedAnswer) {
 }
 
 Nextbtn.addEventListener("click" ,()=>{
-  Index++;
-  Nextbtn.style.display="none";
-  while (Buttons.firstChild) {                    //imp concept of removing previous elements 
-    Buttons.removeChild(Buttons.firstChild);
-  }
-  Showquestion();
 
+  if (Index > quizData.length) {
+
+    startquiz();
+  }
+  else{
+
+
+    Index++;
+    Nextbtn.style.display="none";
+    while (Buttons.firstChild) {                    //imp concept of removing previous elements 
+      Buttons.removeChild(Buttons.firstChild);
+    }
+    Showquestion();
+  
+
+  }
+  
+ 
 
 })
