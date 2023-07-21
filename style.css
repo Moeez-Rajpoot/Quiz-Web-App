@@ -58,3 +58,19 @@
     background: linear-gradient(rgb(10, 201, 234) ,blue);
 }
 
+.correct{
+
+    background-color: rgb(68, 233, 56);
+    color: black;
+}
+
+.Incorrect{
+
+    background-color: rgb(217, 45, 45);
+    color: white;
+}
+.bt[disabled] {
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
